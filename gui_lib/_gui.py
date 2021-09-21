@@ -34,7 +34,6 @@ class Ui_Form(object):
         self.stopBtn.setGeometry(QRect(860, 50, 100, 50))
 
         self.retranslateUi(Form)
-
         QMetaObject.connectSlotsByName(Form)
     # setupUi
 
@@ -46,9 +45,4 @@ class Ui_Form(object):
     # retranslateUi
 
 
-    @Slot(Image)
-    def set_image(self, camera_image):
-        print("w:",camera_image.shape[1])
-        image = QImage(camera_image, camera_image.shape[1], camera_image.shape[0], camera_image.strides[0], QImage.Format_RGB888)
-        pix = QPixmap.fromImage(image)
-        self.image_label.setPixmap(pix)
+
